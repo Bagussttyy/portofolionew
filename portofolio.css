@@ -1,0 +1,181 @@
+*{box-sizing:border-box;margin:0;padding:0;}
+html, body {height:100%;}
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg,#667eea,#0000);
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 0;
+}
+
+/* FLEX MODE */
+.container {
+    width: 95%;                 /* memenuhi layar di Windows */
+    max-width: 1300px;          /* batas tetap agar tidak kelebaran */
+    background: rgba(0,0,0,0.7);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+
+h1,h2,h3 {text-align: center; margin-bottom: 20px;}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* FOTO */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* INFO PROFIL */
+.profile-info {
+    flex: 1;
+    min-width: 260px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+}
+.profile-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    display: flex;
+    gap: 8px;
+    line-height: 1.6;
+}
+.profile-info p strong {width: 90px;}
+
+/* CARD LIST */
+section {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.projects, .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    width: 260px;
+    transition: 0.3s;
+}
+
+/* ICON KONTAK */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.icon-box {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: .2s;
+}
+.icon-box ion-icon {font-size: 40px;}
+.icon-box span {margin-top: 6px; display:block; font-size:14px;}
+.icon-box:hover {transform: scale(1.15); color: #fbbf24;}
+.icon-box:hover span {color: #fbbf24;}
+
+/* RESPONSIVE UNTUK ANDROID */
+
+
+/* ===== EDUCATION TIMELINE ===== */
+
+.education-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #abcad7;
+    letter-spacing: 1px;
+}
+
+.edu-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-left: 10px;
+    border-left: 3px solid rgba(255,255,255,0.4);
+}
+
+.edu-card {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(4px);
+    transition: transform .3s;
+}
+
+.edu-card:hover {
+    transform: translateX(8px);
+}
+
+.edu-card::before {
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    background: #06b6d4;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+
+.year {
+    min-width: 80px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #06b6d4;
+}
+
+.year.ongoing {
+    color: #fbbf24;
+}
+
+.detail h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.detail p {
+    margin: 3px 0 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
